@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1.csproj", "{FBE376EE-2791-44BC-8C76-F1BE3B27C237}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CutleryProjectTest", "..\CutleryProjectTest\CutleryProjectTest.csproj", "{0AF21345-90F1-4A3A-A65F-0952F9E36BD2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FBE376EE-2791-44BC-8C76-F1BE3B27C237}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FBE376EE-2791-44BC-8C76-F1BE3B27C237}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBE376EE-2791-44BC-8C76-F1BE3B27C237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AF21345-90F1-4A3A-A65F-0952F9E36BD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AF21345-90F1-4A3A-A65F-0952F9E36BD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AF21345-90F1-4A3A-A65F-0952F9E36BD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AF21345-90F1-4A3A-A65F-0952F9E36BD2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

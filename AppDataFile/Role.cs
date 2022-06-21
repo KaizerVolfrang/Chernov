@@ -7,25 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfApp1
+namespace WpfApp1.AppDataFile
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Order
+    public partial class Role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Order()
+        public Role()
         {
-            this.Product = new HashSet<Product>();
+            this.User = new HashSet<User>();
         }
     
-        public int OrderID { get; set; }
-        public string OrderStatus { get; set; }
-        public System.DateTime OrderDeliveryDate { get; set; }
-        public string OrderPickupPoint { get; set; }
+        public int RoleID { get; set; }
+        public string RoleName { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Product> Product { get; set; }
+        public virtual ICollection<User> User { get; set; }
     }
 }

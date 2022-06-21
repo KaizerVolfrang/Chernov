@@ -7,28 +7,39 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WpfApp1
+namespace WpfApp1.AppDataFile
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ChernovEntities : DbContext
+    public partial class variant3Entities1 : DbContext
     {
-        public ChernovEntities()
-            : base("name=ChernovEntities")
+        private static variant3Entities1 _context;
+        public variant3Entities1()
+            : base("name=variant3Entities1")
         {
         }
-    
+        public static variant3Entities1 GetContext()
+        {
+            if (_context == null)
+                _context = new variant3Entities1();
+            return _context;
+        }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Category> Category { get; set; }
+        public virtual DbSet<Manufacturer> Manufacturer { get; set; }
         public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<OrderProduct> OrderProduct { get; set; }
+        public virtual DbSet<PickupPoint> PickupPoint { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Status> Status { get; set; }
+        public virtual DbSet<Supplier> Supplier { get; set; }
         public virtual DbSet<User> User { get; set; }
     }
 }
