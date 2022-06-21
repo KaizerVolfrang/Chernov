@@ -24,6 +24,11 @@ namespace WpfApp1.Views
         {
             InitializeComponent();
             //ConnectOdb.conObj = new variant3Entities1();
+            RefreshData();
+        }
+
+        private void RefreshData()
+        {
             DGridProduct.ItemsSource = variant3Entities1.GetContext().Product.ToList();
         }
 

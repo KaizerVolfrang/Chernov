@@ -19,11 +19,13 @@ namespace WpfApp1.Views
     /// </summary>
     public partial class RegistrationWindow : Window
     {
-        public variant3Entities1 _context;
+        private variant3Entities1 _context;
+        private User user;
+        private string UserLogin;
+        private string UserPassword;
         public RegistrationWindow()
         {
             InitializeComponent();
-
         }
 
         private void exitButton_Click(object sender, RoutedEventArgs e)
@@ -37,28 +39,30 @@ namespace WpfApp1.Views
 
         private void regButton_Click(object sender, RoutedEventArgs e)
         {
-            StringBuilder errors = new StringBuilder();
-            var login = loginTextBlock.Text;
-            if (string.IsNullOrEmpty(login))
-                errors.AppendLine("Введите логин");
-            var password = passwordTextBlock.Text;
-            if (string.IsNullOrEmpty(password))
+            // StringBuilder errors = new StringBuilder();
+            // if (string.IsNullOrEmpty(UserLogin))
+            //     errors.AppendLine("Введите логин");
+            // if (string.IsNullOrEmpty(UserPassword))
+            //     rrors.AppendLine("Введите пароль");
+            //     MessageBox.Show(errors.ToString()); 
+            if (string.IsNullOrEmpty(loginTextBlock.Text) || (string.IsNullOrEmpty(passwordTextBlock.Text))) 
             {
-                errors.AppendLine("Введите пароль");
-
-                MessageBox.Show(errors.ToString()); 
-            }
-            else
-            {
+                MessageBox.Show("Введите корректные данные");
                 return;
             }
+            
+            
 
-            variant3Entities1.GetContext().SaveChanges();
+            user = new User()
+            {
+                UserLogin = this.loginTextBlock.Text,
+                UserPassword = this.passwordTextBlock.Text
+            };
+            variant3Entities1.GetContext().User.Add(user);
+           // variant3Entities1.GetContext().SaveChanges();
 
-            Hide();
             Product productWindow = new Product();
-            productWindow.ShowDialog();
-            Show();
+            productWindow.Show();
             Close();
         }
     }
